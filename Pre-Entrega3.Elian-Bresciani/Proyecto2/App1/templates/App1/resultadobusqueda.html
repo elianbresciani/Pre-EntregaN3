@@ -7,14 +7,18 @@
     <title>Formulario - Agregar Curso</title>
 </head>
 <body>
-     <p> Estamos buscando el: {{perro}}</p>
-     {% if perros %} 
-     <ul>
-     {% for perro in perros %} 
-         <li>{{perro.raza}}</li>
-         <li>{{perro.nombre}}</li>
-     {% endfor %}
-     </ul>
-     {% endif %}
+    <p> Estamos buscando el: {{nombre}}</p>
+    {% if perros %} 
+    <ul>
+    {% for nombre in perros %} 
+        <li>{{nombre.nombre}}</li>
+        <li>{{nombre.raza}}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p> No hay datos con esa descripcion</p>
+    {% endif %}
+    <p style="color:red;">{{respuesta}}</p>
 </body>
 </html>
+```
